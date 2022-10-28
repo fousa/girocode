@@ -46,7 +46,7 @@ module Girocode
     
     def currency=(value)
       value = value.to_s.upcase
-      raise ArgumentError, "Invalid currency" unless value.match?(/\A[A-Z]{3}\z/)
+      raise ArgumentError, "Invalid currency" if value.nil?
       @currency = value
     end
     
